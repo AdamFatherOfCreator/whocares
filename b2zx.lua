@@ -92,7 +92,7 @@ local swordburst = {
     autocollect = {Value = false},
     aura = {Value = false},
     killauraplr = {Value = false},
-    dist = {Value = 15},
+    dist = {Value = 5},
     cds = {Value = 0.4},
     cd = {Value = 0.3},
     range = {Value = 40},
