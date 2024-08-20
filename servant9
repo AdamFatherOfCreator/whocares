@@ -537,7 +537,6 @@ function Kavo.CreateLib(kavName, themeList)
             Objects[sectionName] = "TextColor3"
             sectionName.TextSize = 20.000
             sectionName.TextWrapped = true
-            sectionName.TextXAlignment = Enum.TextXAlignment.Middle
             if themeList.SchemeColor == Color3.fromRGB(255,255,255) then
                 Utility:TweenObject(sectionName, {TextColor3 = Color3.fromRGB(0,0,0)}, 0.2)
             end 
