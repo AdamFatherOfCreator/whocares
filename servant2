@@ -531,7 +531,6 @@ function Kavo.CreateLib(kavName, themeList)
             sectionName.Font = Enum.Font.Merriweather
             sectionName.Text = secName
             sectionName.TextWrapped = true
-            sectionName.TextScaled = true
             sectionName.RichText = true
             sectionName.TextColor3 = themeList.TextColor
             Objects[sectionName] = "TextColor3"
