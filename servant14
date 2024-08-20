@@ -272,12 +272,13 @@ function Kavo.CreateLib(kavName, themeList)
 
     hide.Name = "hide"
     hide.Parent = MainHeader
-    hide.BackgroundTransparency = 1
-    hide.Position = UDim2.new(0.749999988, 0, 0.137999997, 0)
-    hide.Size = UDim2.new(0, 21, 0, 21)
     hide.Image = "rbxassetid://4991505223"
-    hide.ImageRectOffset = Vector2.new(284, 4)
-    hide.ImageRectSize = Vector2.new(24, 24)
+    hide.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+    hide.BackgroundTransparency = 1
+    hide.ClipsDescendants = true
+    hide.Position = UDim2.new(0.849999988, 0, 0.137999997, 0)
+    hide.Size = UDim2.new(0, 21, 0, 21)
+
     hide.MouseButton1Click:Connect(function()
     end)
 
