@@ -279,11 +279,6 @@ function Kavo.CreateLib(kavName, themeList)
     hide.ImageRectOffset = Vector2.new(284, 4)
     hide.ImageRectSize = Vector2.new(24, 24)
     hide.MouseButton1Click:Connect(function()
-    if game.CoreGui[LibName].Enabled then
-        game.CoreGui[LibName].Enabled = false
-    else
-        game.CoreGui[LibName].Enabled = true
-    end
     end)
 
     close.Name = "close"
