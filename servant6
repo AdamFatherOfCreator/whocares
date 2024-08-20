@@ -410,7 +410,7 @@ function Kavo.CreateLib(kavName, themeList)
         tabButton.Text = tabName
         tabButton.TextColor3 = themeList.TextColor
         Objects[tabButton] = "TextColor3"
-        tabButton.TextSize = 14.000
+        tabButton.TextWrapped = true
         tabButton.BackgroundTransparency = 1
 
         if first then
