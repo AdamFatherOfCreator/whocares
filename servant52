@@ -871,7 +871,7 @@ game.CoreGui.BBB.hideUI.Visible = false
                 write.ImageRectSize = Vector2.new(36, 36)
 
                 TextBox.Parent = textboxElement
-                TextBox.BackgroundColor3 = Color3.fromRGB(themeList.ElementColor.r * 255 - 6, themeList.ElementColor.g * 255 - 6, themeList.ElementColor.b * 255 - 7)
+                TextBox.BackgroundColor3 = Color3.fromRGB(200 - themeList.ElementColor.r, 200 - themeList.ElementColor.g, 200 - themeList.ElementColor.b)
                 TextBox.BorderSizePixel = 0
                 TextBox.ClipsDescendants = true
                 TextBox.Position = UDim2.new(0.488749921, 0, 0.212121218, 0)
@@ -1004,7 +1004,7 @@ game.CoreGui.BBB.hideUI.Visible = false
                         if not hovering then
                             textboxElement.BackgroundColor3 = themeList.ElementColor
                         end
-                        TextBox.BackgroundColor3 = Color3.fromRGB(themeList.ElementColor.r * 255 - 6, themeList.ElementColor.g * 255 - 6, themeList.ElementColor.b * 255 - 7)
+                        TextBox.BackgroundColor3 = Color3.fromRGB(200 - themeList.ElementColor.r, 200 - themeList.ElementColor.g, 200 - themeList.ElementColor.b)
                         viewInfo.ImageColor3 = themeList.SchemeColor
                         moreInfo.BackgroundColor3 = themeList.SchemeColor
                         moreInfo.TextColor3 = themeList.TextColor
