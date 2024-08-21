@@ -193,6 +193,7 @@ function Kavo.CreateLib(kavName, themeList)
         end
     end
     local ScreenGui = Instance.new("ScreenGui")
+    local hideUI = Instance.new("ImageButton")
     local Main = Instance.new("Frame")
     local MainCorner = Instance.new("UICorner")
     local MainHeader = Instance.new("Frame")
@@ -213,6 +214,15 @@ function Kavo.CreateLib(kavName, themeList)
     local blurFrame = Instance.new("Frame")
 
     Kavo:DraggingEnabled(MainHeader, Main)
+
+    hideUI.Name = "hideUI"
+    hideUI.Parent = ScreenGui
+    hideUI.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
+    hideUI.BackgroundTransparency = 1
+    hideUI.ClipsDescendants = true
+    hideUI.Position = UDim2.new(0.3, 1, -0.1, 1)
+    hideUI.Size = UDim2.new(0, 50, 0, 50)
+    hideUI.Image = "http://www.roblox.com/asset/?id=14208692008"
 
     blurFrame.Name = "blurFrame"
     blurFrame.Parent = pages
