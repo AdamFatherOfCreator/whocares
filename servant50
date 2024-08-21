@@ -1326,7 +1326,7 @@ game.CoreGui.BBB.hideUI.Visible = false
 
                 sliderBtn.Name = "sliderBtn"
                 sliderBtn.Parent = sliderElement
-                sliderBtn.BackgroundColor3 = Color3.fromRGB(themeList.ElementColor.r + 20, themeList.ElementColor.g + 20, themeList.ElementColor.b + 20)
+                sliderBtn.BackgroundColor3 = Color3.fromRGB(255 - themeList.ElementColor.r, 255 - themeList.ElementColor.g, 255 - themeList.ElementColor.b)
                 sliderBtn.BorderSizePixel = 0
                 sliderBtn.Position = UDim2.new(0.488749951, 0, 0.393939406, 0)
                 sliderBtn.Size = UDim2.new(0, 149, 0, 6)
@@ -1440,7 +1440,7 @@ game.CoreGui.BBB.hideUI.Visible = false
                         write.ImageColor3 = themeList.SchemeColor
                         togName.TextColor3 = themeList.TextColor
                         viewInfo.ImageColor3 = themeList.SchemeColor
-                        sliderBtn.BackgroundColor3 = Color3.fromRGB(themeList.ElementColor.r + 20, themeList.ElementColor.g + 20, themeList.ElementColor.b + 20)
+                        sliderBtn.BackgroundColor3 = Color3.fromRGB(255 - themeList.ElementColor.r, 255 - themeList.ElementColor.g, 255 - themeList.ElementColor.b)
                         sliderDrag.BackgroundColor3 = themeList.SchemeColor
                     end
                 end)()
