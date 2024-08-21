@@ -228,6 +228,19 @@ function Kavo.CreateLib(kavName, themeList)
     hideUI.Position = UDim2.new(0.23, 1, -0.11, 1)
     hideUI.Size = UDim2.new(0, 50, 0, 50)
     hideUI.Image = "http://www.roblox.com/asset/?id=14208692008"
+    hideUI.Visible = false
+    hideUI.MouseButton1Up:Connect(function()
+    game.CoreGui[LibName].Enabled = true
+        game.TweenService:Create(close, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+            ImageTransparency = 0
+        }):Play()
+        wait()
+        game.TweenService:Create(Main, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Size = UDim2.new(0, 525, 0, 318),
+			Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X * 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y * 2))
+		}):Play()
+
+    end)
 
     hideUICorner.Parent = hideUI
     hideUICorner.CornerRadius = UDim.new(1,0)
@@ -297,6 +310,17 @@ function Kavo.CreateLib(kavName, themeList)
     hide.Position = UDim2.new(0.89, 0, -0.2, 0)
     hide.Size = UDim2.new(0, 40, 0, 40)
     hide.MouseButton1Click:Connect(function()
+        game.TweenService:Create(close, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+            ImageTransparency = 1
+        }):Play()
+        wait()
+        game.TweenService:Create(Main, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Size = UDim2.new(0,0,0,0),
+			Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
+		}):Play()
+        wait(1)
+        game.CoreGui[LibName].Enabled = false
+        game.CoreGui.BBB.hideUI.Visible = true
     end)
 
     close.Name = "close"
