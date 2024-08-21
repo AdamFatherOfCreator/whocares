@@ -230,6 +230,7 @@ function Kavo.CreateLib(kavName, themeList)
     hideUI.Image = "http://www.roblox.com/asset/?id=14208692008"
     hideUI.Visible = false
     hideUI.MouseButton1Up:Connect(function()
+game.CoreGui.BBB.hideUI.Visible = false
     game.CoreGui[LibName].Enabled = true
         game.TweenService:Create(close, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
             ImageTransparency = 0
