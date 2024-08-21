@@ -1139,7 +1139,7 @@ game.CoreGui.BBB.hideUI.Visible = false
                     btn.MouseButton1Click:Connect(function()
                         if not focusing then
                             if toggled == false then
-                                game.TweenService:Create(img, TweenInfo.new(0, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
+                                game.TweenService:Create(img, TweenInfo.new(0.2, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
                                     ImageTransparency = 0
                                 }):Play()
                                 local c = sample:Clone()
@@ -1159,7 +1159,7 @@ game.CoreGui.BBB.hideUI.Visible = false
                                 end
                                 c:Destroy()
                             else
-                                game.TweenService:Create(img, TweenInfo.new(0, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
+                                game.TweenService:Create(img, TweenInfo.new(0.2, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
                                     ImageTransparency = 1
                                 }):Play()
                                 local c = sample:Clone()
