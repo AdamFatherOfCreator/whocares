@@ -193,6 +193,7 @@ function Kavo.CreateLib(kavName, themeList)
         end
     end
     local ScreenGui = Instance.new("ScreenGui")
+    local BBB =  Instance.new("ScreenGui")
     local hideUI = Instance.new("ImageButton")
     local Main = Instance.new("Frame")
     local MainCorner = Instance.new("UICorner")
@@ -215,8 +216,11 @@ function Kavo.CreateLib(kavName, themeList)
 
     Kavo:DraggingEnabled(MainHeader, Main)
 
+    BBB.Name = "BBB"
+    BBB.Parent = game.CoreGui
+
     hideUI.Name = "hideUI"
-    hideUI.Parent = ScreenGui
+    hideUI.Parent = BBB
     hideUI.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
     hideUI.BackgroundTransparency = 1
     hideUI.ClipsDescendants = true
