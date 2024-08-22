@@ -2648,7 +2648,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
             	local UICorner = Instance.new("UICorner")
             	label.Name = "label"
             	label.Parent = sectionInners
-            	label.BackgroundColor3 = themeList.ElementColor
+            	label.BackgroundColor3 = themeList.Background
             	label.BorderSizePixel = 0
 				label.ClipsDescendants = true
             	label.Text = title
@@ -2673,7 +2673,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
 
 		        coroutine.wrap(function()
 		            while wait() do
-		                label.BackgroundColor3 = themeList.ElementColor
+		                label.BackgroundColor3 = themeList.Background
 		                label.TextColor3 = themeList.TextColor
 		            end
 		        end)()
