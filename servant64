@@ -192,6 +192,7 @@ function Kavo.CreateLib(kavName, themeList)
     end
     local ScreenGui = Instance.new("ScreenGui")
     local BBB =  Instance.new("ScreenGui")
+    local hideUIFrame =  Instance.new("Frame")
     local hideUI = Instance.new("ImageButton")
     local hideUICorner = Instance.new("UICorner")
     local Main = Instance.new("Frame")
@@ -219,7 +220,7 @@ function Kavo.CreateLib(kavName, themeList)
     BBB.Parent = game.CoreGui
 
     hideUI.Name = "hideUI"
-    hideUI.Parent = BBB
+    hideUI.Parent = hideUIFrame
     hideUI.BackgroundColor3 = Color3.fromRGB(0, 255, 127)
     hideUI.BackgroundTransparency = 1
     hideUI.ClipsDescendants = true
@@ -228,7 +229,7 @@ function Kavo.CreateLib(kavName, themeList)
     hideUI.Image = "http://www.roblox.com/asset/?id=14208692008"
     hideUI.Visible = false
     hideUI.MouseButton1Up:Connect(function()
-game.CoreGui.BBB.hideUI.Visible = false
+game.CoreGui.BBB.hideUIFrame.hideUI.Visible = false
     game.CoreGui[LibName].Enabled = true
         game.TweenService:Create(Main, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 			Size = UDim2.new(0, 525, 0, 318),
@@ -240,7 +241,7 @@ game.CoreGui.BBB.hideUI.Visible = false
     hideUICorner.Parent = hideUI
     hideUICorner.CornerRadius = UDim.new(1,0)
 
-Kavo:DraggingEnabled(hideUI, BBB)
+Kavo:DraggingEnabled(hideUI, hideUIFrame)
 
     blurFrame.Name = "blurFrame"
     blurFrame.Parent = pages
@@ -255,6 +256,11 @@ Kavo:DraggingEnabled(hideUI, BBB)
     ScreenGui.Name = LibName
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     ScreenGui.ResetOnSpawn = false
+
+    hideUIFrame.Name = "hideUIFrame"
+    hideUIFrame.Parent = BBB
+    hideUIFrame.BackgroundTransparency = 1
+    hideUIFrame.Size = UDim2.new(1, 0, 1, 0)
 
     Main.Name = "Main"
     Main.Parent = ScreenGui
@@ -307,7 +313,7 @@ Kavo:DraggingEnabled(hideUI, BBB)
     hide.Position = UDim2.new(0.89, 0, -0.2, 0)
     hide.Size = UDim2.new(0, 40, 0, 40)
     hide.MouseButton1Click:Connect(function()
-        game.CoreGui.BBB.hideUI.Visible = true
+        game.CoreGui.BBB.hideUIFrame.hideUI.Visible = true
         game.TweenService:Create(Main, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
 			Size = UDim2.new(0,0,0,0),
 			Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
