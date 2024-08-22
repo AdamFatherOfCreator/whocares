@@ -240,6 +240,8 @@ game.CoreGui.BBB.hideUI.Visible = false
     hideUICorner.Parent = hideUI
     hideUICorner.CornerRadius = UDim.new(1,0)
 
+Kavo:DraggingEnabled(hideUI, BBB)
+
     blurFrame.Name = "blurFrame"
     blurFrame.Parent = pages
     blurFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
