@@ -2648,7 +2648,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
             	local UICorner = Instance.new("UICorner")
             	label.Name = "label"
             	label.Parent = sectionInners
-            	label.BackgroundColor3 = themeList.Background
+            	label.BackgroundColor3 = themeList.ElementColor
             	label.BorderSizePixel = 0
 				label.ClipsDescendants = true
             	label.Text = title
@@ -2673,7 +2673,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
 
 		        coroutine.wrap(function()
 		            while wait() do
-		                label.BackgroundColor3 = themeList.Background
+		                label.BackgroundColor3 = themeList.ElementColor
 		                label.TextColor3 = themeList.TextColor
 		            end
 		        end)()
@@ -2693,7 +2693,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
             	local UICorner2 = Instance.new("UICorner")
             	label2.Name = "label2"
             	label2.Parent = sectionInners
-            	label2.BackgroundColor3 = themeList.Background
+            	label2.BackgroundColor3 = themeList.ElementColor
             	label2.BorderSizePixel = 0
 				label2.ClipsDescendants = true
             	label2.Text = title
@@ -2716,7 +2716,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
 
 		        coroutine.wrap(function()
 		            while wait() do
-		                label2.BackgroundColor3 = themeList.Background
+		                label2.BackgroundColor3 = themeList.ElementColor
 		                label2.TextColor3 = themeList.TextColor
 		            end
 		        end)()
