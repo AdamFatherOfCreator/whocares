@@ -278,7 +278,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
     MainHeader.BackgroundColor3 = themeList.Header
     Objects[MainHeader] = "BackgroundColor3"
     MainHeader.Size = UDim2.new(0, 525, 0, 29)
-    headerCover.CornerRadius = UDim.new(0, 4)
+    headerCover.CornerRadius = UDim.new(0, 7)
     headerCover.Name = "headerCover"
     headerCover.Parent = MainHeader
 
@@ -347,7 +347,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
     MainSide.Position = UDim2.new(-7.4505806e-09, 0, 0.0911949649, 0)
     MainSide.Size = UDim2.new(0, 149, 0, 289)
 
-    sideCorner.CornerRadius = UDim.new(0, 4)
+    sideCorner.CornerRadius = UDim.new(0, 7)
     sideCorner.Name = "sideCorner"
     sideCorner.Parent = MainSide
 
