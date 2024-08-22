@@ -2685,27 +2685,27 @@ game.CoreGui.BBB.hideUI.Visible = false
             	local labelFunctions2 = {}
             	local label2 = Instance.new("TextLabel")
             	local UICorner2 = Instance.new("UICorner")
-            	label.Name = "label2"
-            	label.Parent = sectionInners
-            	label.BackgroundColor3 = themeList.Background
-            	label.BorderSizePixel = 0
+            	label2.Name = "label2"
+            	label2.Parent = sectionInners
+            	label2.BackgroundColor3 = themeList.Background
+            	label2.BorderSizePixel = 0
 				label.ClipsDescendants = true
-            	label.Text = title
-           		label.Size = UDim2.new(0, 352, 0, 33)
-	            label.Font = Enum.Font.Merriweather
-	            label.Text = "  "..title
-	            label.RichText = true
-	            label.TextColor3 = themeList.TextColor
-	            Objects[label] = "TextColor3"
-	            label.TextSize = 14.000	            
+            	label2.Text = title
+           		label2.Size = UDim2.new(0, 352, 0, 33)
+	            label2.Font = Enum.Font.Merriweather
+	            label2.Text = "  "..title
+	            label2.RichText = true
+	            label2.TextColor3 = themeList.TextColor
+	            Objects[label2] = "TextColor3"
+	            label2.TextSize = 14.000	            
 	           	UICorner.CornerRadius = UDim.new(0, 4)
                 UICorner.Parent = label2
             	
 	            if themeList.SchemeColor == Color3.fromRGB(255,255,255) then
-	                Utility:TweenObject(label, {TextColor3 = Color3.fromRGB(0,0,0)}, 0.2)
+	                Utility:TweenObject(label2, {TextColor3 = Color3.fromRGB(0,0,0)}, 0.2)
 	            end 
 	            if themeList.SchemeColor == Color3.fromRGB(0,0,0) then
-	                Utility:TweenObject(label, {TextColor3 = Color3.fromRGB(255,255,255)}, 0.2)
+	                Utility:TweenObject(label2, {TextColor3 = Color3.fromRGB(255,255,255)}, 0.2)
 	            end 
 
 		        coroutine.wrap(function()
@@ -2717,8 +2717,8 @@ game.CoreGui.BBB.hideUI.Visible = false
                 updateSectionFrame()
                 UpdateSize()
                 function labelFunctions2:UpdateLabel2(newText)
-                	if label.Text ~= "  "..newText then
-                		label.Text = "  "..newText
+                	if label2.Text ~= "  "..newText then
+                		label2.Text = "  "..newText
                 	end
                 end	
                 return labelFunctions2
