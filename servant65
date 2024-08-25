@@ -269,7 +269,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
     Main.Position = UDim2.new(0.336503863, -141, 0.275485456, -97)
     Main.Size = UDim2.new(0, 525, 0, 318)
 
-    MainCorner.CornerRadius = UDim.new(0, 4)
+    MainCorner.CornerRadius = UDim.new(0, 7)
     MainCorner.Name = "MainCorner"
     MainCorner.Parent = Main
 
@@ -278,7 +278,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
     MainHeader.BackgroundColor3 = themeList.Header
     Objects[MainHeader] = "BackgroundColor3"
     MainHeader.Size = UDim2.new(0, 525, 0, 29)
-    headerCover.CornerRadius = UDim.new(0, 4)
+    headerCover.CornerRadius = UDim.new(0, 7)
     headerCover.Name = "headerCover"
     headerCover.Parent = MainHeader
 
@@ -347,7 +347,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
     MainSide.Position = UDim2.new(-7.4505806e-09, 0, 0.0911949649, 0)
     MainSide.Size = UDim2.new(0, 149, 0, 289)
 
-    sideCorner.CornerRadius = UDim.new(0, 4)
+    sideCorner.CornerRadius = UDim.new(0, 7)
     sideCorner.Name = "sideCorner"
     sideCorner.Parent = MainSide
 
@@ -442,7 +442,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
         page.Size = UDim2.new(1, 0, 1, 0)
         page.ScrollBarThickness = 5
         page.Visible = false
-        page.ScrollBarImageColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 16, themeList.SchemeColor.g * 255 - 15, themeList.SchemeColor.b * 255 - 28)
+        page.ScrollBarImageColor3 = themeList.SchemeColor
 
         pageListing.Name = "pageListing"
         pageListing.Parent = page
@@ -513,7 +513,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
         coroutine.wrap(function()
             while wait() do
                 page.BackgroundColor3 = themeList.Background
-                page.ScrollBarImageColor3 = Color3.fromRGB(themeList.SchemeColor.r * 255 - 16, themeList.SchemeColor.g * 255 - 15, themeList.SchemeColor.b * 255 - 28)
+                page.ScrollBarImageColor3 = themeList.SchemeColor
                 tabButton.TextColor3 = themeList.TextColor
                 tabButton.BackgroundColor3 = themeList.SchemeColor
             end
@@ -2648,11 +2648,11 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
             	local UICorner = Instance.new("UICorner")
             	label.Name = "label"
             	label.Parent = sectionInners
-            	label.BackgroundColor3 = themeList.SchemeColor
+            	label.BackgroundColor3 = themeList.Background
             	label.BorderSizePixel = 0
 				label.ClipsDescendants = true
             	label.Text = title
-           		label.Size = UDim2.new(0, 352, 0, 33)
+           		label.Size = UDim2.new(0, 352, 0, 17)
 	            label.Font = Enum.Font.Merriweather
 	            label.Text = "  "..title
 	            label.RichText = true
@@ -2673,7 +2673,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
 
 		        coroutine.wrap(function()
 		            while wait() do
-		                label.BackgroundColor3 = themeList.SchemeColor
+		                label.BackgroundColor3 = themeList.Background
 		                label.TextColor3 = themeList.TextColor
 		            end
 		        end)()
@@ -2693,7 +2693,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
             	local UICorner2 = Instance.new("UICorner")
             	label2.Name = "label2"
             	label2.Parent = sectionInners
-            	label2.BackgroundColor3 = themeList.Background
+            	label2.BackgroundColor3 = themeList.ElementColor
             	label2.BorderSizePixel = 0
 				label2.ClipsDescendants = true
             	label2.Text = title
@@ -2716,7 +2716,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
 
 		        coroutine.wrap(function()
 		            while wait() do
-		                label2.BackgroundColor3 = themeList.Background
+		                label2.BackgroundColor3 = themeList.ElementColor
 		                label2.TextColor3 = themeList.TextColor
 		            end
 		        end)()
