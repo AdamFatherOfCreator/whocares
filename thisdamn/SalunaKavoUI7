@@ -2223,7 +2223,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
                     optionSelect.Parent = dropFrame
                     optionSelect.BackgroundColor3 = themeList.Background
                     optionSelect.Position = UDim2.new(0, 0, 0.235294119, 0)
-                    optionSelect.Size = UDim2.new(0, 352, 0, 33)
+                    optionSelect.Size = UDim2.new(0, 352, 0, 17)
                     optionSelect.AutoButtonColor = false
                     optionSelect.Font = Enum.Font.Merriweather
                     optionSelect.Text = "  "..v
@@ -2273,7 +2273,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
                         optionSelect.Parent = dropFrame
                         optionSelect.BackgroundColor3 = themeList.Background
                         optionSelect.Position = UDim2.new(0, 0, 0.235294119, 0)
-                        optionSelect.Size = UDim2.new(0, 352, 0, 33)
+                        optionSelect.Size = UDim2.new(0, 352, 0, 17)
                         optionSelect.Font = Enum.Font.Merriweather
                         optionSelect.Text = "  "..v
                         optionSelect.TextColor3 = Color3.fromRGB(themeList.TextColor.r * 255 - 6, themeList.TextColor.g * 255 - 6, themeList.TextColor.b * 255 - 6)
