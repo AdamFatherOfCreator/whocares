@@ -2650,16 +2650,16 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
             	label.Parent = sectionInners
             	label.BackgroundColor3 = themeList.Background
             	label.BorderSizePixel = 0
-				label.ClipsDescendants = true
+		label.ClipsDescendants = true
             	label.Text = title
-           		label.Size = UDim2.new(0, 352, 0, 17)
-	            label.Font = Enum.Font.Merriweather
-	            label.Text = "  "..title
-	            label.RichText = true
-	            label.TextColor3 = themeList.TextColor
-	            Objects[label] = "TextColor3"
-	            label.TextSize = 14.000
-	            label.TextXAlignment = Enum.TextXAlignment.Left
+           	label.Size = UDim2.new(0, 352, 0, 17)
+           	label.Font = Enum.Font.Merriweather
+           	label.Text = "  "..title
+           	label.RichText = true
+           	label.TextColor3 = themeList.TextColor
+           	Objects[label] = "TextColor3"
+           	label.TextSize = 14.000
+           	label.TextXAlignment = Enum.TextXAlignment.Left
 	            
 	           	UICorner.CornerRadius = UDim.new(0, 4)
                 UICorner.Parent = label
@@ -2729,6 +2729,51 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
                 end	
                 return labelFunctions2
             end	
+
+            function Elements:NewLabel3(title)
+            	local labelFunctions3 = {}
+            	local label3 = Instance.new("TextLabel")
+            	local UICorner3 = Instance.new("UICorner")
+            	label3.Name = "label3"
+            	label3.Parent = sectionInners
+            	label3.BackgroundColor3 = themeList.Background
+            	label3.BorderSizePixel = 0
+				label3.ClipsDescendants = true
+            	label3.Text = title
+           		label3.Size = UDim2.new(0, 352, 0, 17)
+	            label3.Font = Enum.Font.Merriweather
+	            label3.Text = "  "..title
+	            label3.RichText = true
+	            label3.TextColor3 = themeList.TextColor
+	            Objects[label3] = "TextColor3"
+	            label3.TextSize = 14.000
+	            
+	           	UICorner3.CornerRadius = UDim.new(0, 4)
+                UICorner3.Parent = label3
+            	
+	            if themeList.SchemeColor == Color3.fromRGB(255,255,255) then
+	                Utility:TweenObject(label3, {TextColor3 = Color3.fromRGB(0,0,0)}, 0.2)
+	            end 
+	            if themeList.SchemeColor == Color3.fromRGB(0,0,0) then
+	                Utility:TweenObject(label3, {TextColor3 = Color3.fromRGB(255,255,255)}, 0.2)
+	            end 
+
+		        coroutine.wrap(function()
+		            while wait() do
+		                label3.BackgroundColor3 = themeList.Background
+		                label3.TextColor3 = themeList.TextColor
+		            end
+		        end)()
+                updateSectionFrame()
+                UpdateSize()
+                function labelFunctions3:UpdateLabel3(newText)
+                	if label3.Text ~= "  "..newText then
+                		label3.Text = "  "..newText
+                	end
+                end	
+                return labelFunctions3
+            end	
+
 
             return Elements
         end
