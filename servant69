@@ -2162,7 +2162,7 @@ Kavo:DraggingEnabled(hideUI, hideUIFrame)
                 coroutine.wrap(function()
                     while wait() do
                         if not hovering then
-                            dropOpen.BackgroundColor3 = themeList.ElementColor
+                            dropOpen.BackgroundColor3 = themeList.Background
                         end
                         Sample.ImageColor3 = themeList.SchemeColor
                         dropFrame.BackgroundColor3 = themeList.Background
